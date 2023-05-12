@@ -4,8 +4,9 @@ const Heart = ({ crossed, onClick }) => (
   <span
     onClick={onClick}
     style={{
-      textDecoration: crossed ? "line-through" : "none",
+      display: crossed ? "none" : "block",
       marginRight: "5px",
+      cursor: "pointer"
     }}
   >
     ❤️

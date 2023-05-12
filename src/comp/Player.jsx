@@ -4,7 +4,7 @@ import Heart from "./Heart.jsx";
 const Player = ({ name, hearts, onClick, onHeartClick }) => (
   <>
     <div onClick={onClick} style={{ display: "flex", alignItems: "center" }}>
-      <p style={{ marginRight: "10px" }}>{name}</p>
+      <p style={{ marginRight: "10px", cursor: "pointer"}}>{name}</p>
       {hearts.map((crossed, index) => (
         <Heart
           key={index}

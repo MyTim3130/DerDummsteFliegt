@@ -81,7 +81,7 @@ const fragen = [
   },
   {
     question: "Wie viele Buchstaben hat das deutsche Alphabet?",
-    answer: "Vierundzwanzig",
+    answer: "26",
   },
   {
     question: "Wie viele Teile hat ein Lego-Set?",
