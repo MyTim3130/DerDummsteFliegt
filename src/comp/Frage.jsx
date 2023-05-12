@@ -713,190 +713,214 @@ const fragen = [
   },
 
   {
-     question: "Was ist die grundlegende Recheneinheit eines Computers?",
-     answer: "Zentraleinheit (Central Processing Unit, CPU)",
-     },
-     
-     {
-     question: "Was bedeutet die Abkürzung 'RAM' in der Computertechnik?",
-     answer: "Random Access Memory",
-     },
-     
-     {
-     question: "In welchem Zahlensystem arbeiten Computer hauptsächlich?",
-     answer: "Binärsystem",
-     },
-     
-     {
-     question: "Was ist ein Algorithmus?",
-     answer: "Eine endliche, wohldefinierte Folge von Anweisungen zur Lösung eines Problems oder zur Durchführung einer Aufgabe.",
-     },
-     
-     {
-     question: "Wie nennt man die Wissenschaft, die sich mit der Entwicklung von Methoden und Algorithmen zur Lösung mathematischer Probleme befasst?",
-     answer: "Informatik",
-     },
-     
-     {
-     question: "Was ist der Unterschied zwischen einem Compiler und einem Interpreter?",
-     answer: "Ein Compiler übersetzt den gesamten Quellcode in Maschinensprache, bevor das Programm ausgeführt wird, während ein Interpreter den Quellcode Zeile für Zeile während der Ausführung übersetzt.",
-     },
-     
-     {
-     question: "Was ist ein Betriebssystem?",
-     answer: "Ein Softwareprogramm, das die Hardware eines Computers verwaltet und Anwendungssoftware ausführt.",
-     },
-     
-     {
-     question: "Was bedeutet die Abkürzung 'HTML'?",
-     answer: "Hypertext Markup Language",
-     },
-     
-     {
-     question: "Was ist ein Netzwerkprotokoll?",
-     answer: "Ein Satz von Regeln und Konventionen, die die Kommunikation zwischen Computern in einem Netzwerk ermöglichen.",
-     },
-     
-     {
-     question: "Was ist ein Beispiel für ein weit verbreitetes Netzwerkprotokoll?",
-     answer: "Internet Protocol (IP)",
-     },
-     
-     {
-     question: "Was ist ein Byte und wie viele Bits enthält es?",
-     answer: "Ein Byte ist eine Einheit der digitalen Information und besteht aus 8 Bits.",
-     },
-     
-     {
-     question: "Welche Programmiersprache wurde von James Gosling bei Sun Microsystems entwickelt?",
-     answer: "Java",
-     },
-     
-     {
-     question: "Was ist ein Datenbanksystem?",
-     answer: "Ein System zur Speicherung, Verwaltung und Abruf von Daten in einer strukturierten und organisierten Weise.",
-     },
-     
-     {
-     question: "Wie heißt der Prozess, bei dem eine höhere Programmiersprache in Maschinensprache übersetzt wird?",
-     answer: "Kompilierung",
-     },
-     
-     {
-     question: "Was ist eine Variable in der Programmierung?",
-     answer: "Ein Speicherort, der einen Wert enthält und in einem Programm verwendet wird.",
-     },
+    question: "Was ist die grundlegende Recheneinheit eines Computers?",
+    answer: "Zentraleinheit (Central Processing Unit, CPU)",
+  },
 
-     {
-          question: "Welcher deutsche Kaiser wurde im Jahr 800 von Papst Leo III. zum Kaiser gekrönt?",
-          answer: "Karl der Große",
-          },
-          
-          {
-          question: "In welchem Jahr fiel die Berliner Mauer?",
-          answer: "1989",
-          },
-          
-          {
-          question: "Wer war der erste Präsident der Vereinigten Staaten?",
-          answer: "George Washington",
-          },
-          
-          {
-          question: "Welches berühmte Ereignis fand am 14. Juli 1789 in Frankreich statt?",
-          answer: "Sturm auf die Bastille",
-          },
-          
-          {
-          question: "Wer war der Anführer des nationalsozialistischen Deutschlands während des Zweiten Weltkriegs?",
-          answer: "Adolf Hitler",
-          },
-          
-          {
-          question: "Wann begann der Erste Weltkrieg?",
-          answer: "1914",
-          },
-          
-          {
-          question: "Wann endete der Erste Weltkrieg?",
-          answer: "1918",
-          },
-          
-          {
-          question: "Wann begann der Zweite Weltkrieg?",
-          answer: "1939",
-          },
-          
-          {
-          question: "Wann endete der Zweite Weltkrieg?",
-          answer: "1945",
-          },
-          
-          {
-          question: "Welche berühmte Person aus der Geschichte wird als Entdecker Amerikas betrachtet?",
-          answer: "Christoph Kolumbus",
-          },
-          
-          {
-          question: "In welchem Jahr wurde die Magna Carta unterzeichnet?",
-          answer: "1215",
-          },
-          
-          {
-          question: "In welchem Jahr wurde die Französische Revolution eingeleitet?",
-          answer: "1789",
-          },
-          
-          {
-          question: "Wer war der erste römische Kaiser?",
-          answer: "Augustus",
-          },
-          
-          {
-          question: "Welches Ereignis markiert das Ende des weströmischen Reiches?",
-          answer: "Der Fall von Rom im Jahr 476 n.Chr.",
-          },
-          
-          {
-          question: "In welchem Jahr wurde das britische Schiff Titanic versenkt?",
-          answer: "1912",
-          },
-          
-          {
-          question: "Wer war der Gründer des mongolischen Reiches?",
-          answer: "Dschingis Khan",
-          },
-          
-          {
-          question: "Wann fand die amerikanische Unabhängigkeitserklärung statt?",
-          answer: "4. Juli 1776",
-          },
-          
-          {
-          question: "Wer ist der Autor der Kommunistischen Manifests?",
-          answer: "Karl Marx und Friedrich Engels",
-          },
-          
-          {
-          question: "Was war das berühmte Schlacht, in der Napoleon Bonaparte endgültig besiegt wurde?",
-          answer: "Schlacht von Waterloo",
-          },
-          
-          {
-          question: "Wann wurden die Vereinten Nationen (UN) gegründet?",
-          answer: "1945",
-          }
+  {
+    question: "Was bedeutet die Abkürzung 'RAM' in der Computertechnik?",
+    answer: "Random Access Memory",
+  },
+
+  {
+    question: "In welchem Zahlensystem arbeiten Computer hauptsächlich?",
+    answer: "Binärsystem",
+  },
+
+  {
+    question: "Was ist ein Algorithmus?",
+    answer:
+      "Eine endliche, wohldefinierte Folge von Anweisungen zur Lösung eines Problems oder zur Durchführung einer Aufgabe.",
+  },
+
+  {
+    question:
+      "Wie nennt man die Wissenschaft, die sich mit der Entwicklung von Methoden und Algorithmen zur Lösung mathematischer Probleme befasst?",
+    answer: "Informatik",
+  },
+
+  {
+    question:
+      "Was ist der Unterschied zwischen einem Compiler und einem Interpreter?",
+    answer:
+      "Ein Compiler übersetzt den gesamten Quellcode in Maschinensprache, bevor das Programm ausgeführt wird, während ein Interpreter den Quellcode Zeile für Zeile während der Ausführung übersetzt.",
+  },
+
+  {
+    question: "Was ist ein Betriebssystem?",
+    answer:
+      "Ein Softwareprogramm, das die Hardware eines Computers verwaltet und Anwendungssoftware ausführt.",
+  },
+
+  {
+    question: "Was bedeutet die Abkürzung 'HTML'?",
+    answer: "Hypertext Markup Language",
+  },
+
+  {
+    question: "Was ist ein Netzwerkprotokoll?",
+    answer:
+      "Ein Satz von Regeln und Konventionen, die die Kommunikation zwischen Computern in einem Netzwerk ermöglichen.",
+  },
+
+  {
+    question:
+      "Was ist ein Beispiel für ein weit verbreitetes Netzwerkprotokoll?",
+    answer: "Internet Protocol (IP)",
+  },
+
+  {
+    question: "Was ist ein Byte und wie viele Bits enthält es?",
+    answer:
+      "Ein Byte ist eine Einheit der digitalen Information und besteht aus 8 Bits.",
+  },
+
+  {
+    question:
+      "Welche Programmiersprache wurde von James Gosling bei Sun Microsystems entwickelt?",
+    answer: "Java",
+  },
+
+  {
+    question: "Was ist ein Datenbanksystem?",
+    answer:
+      "Ein System zur Speicherung, Verwaltung und Abruf von Daten in einer strukturierten und organisierten Weise.",
+  },
+
+  {
+    question:
+      "Wie heißt der Prozess, bei dem eine höhere Programmiersprache in Maschinensprache übersetzt wird?",
+    answer: "Kompilierung",
+  },
+
+  {
+    question: "Was ist eine Variable in der Programmierung?",
+    answer:
+      "Ein Speicherort, der einen Wert enthält und in einem Programm verwendet wird.",
+  },
+
+  {
+    question:
+      "Welcher deutsche Kaiser wurde im Jahr 800 von Papst Leo III. zum Kaiser gekrönt?",
+    answer: "Karl der Große",
+  },
+
+  {
+    question: "In welchem Jahr fiel die Berliner Mauer?",
+    answer: "1989",
+  },
+
+  {
+    question: "Wer war der erste Präsident der Vereinigten Staaten?",
+    answer: "George Washington",
+  },
+
+  {
+    question:
+      "Welches berühmte Ereignis fand am 14. Juli 1789 in Frankreich statt?",
+    answer: "Sturm auf die Bastille",
+  },
+
+  {
+    question:
+      "Wer war der Anführer des nationalsozialistischen Deutschlands während des Zweiten Weltkriegs?",
+    answer: "Adolf Hitler",
+  },
+
+  {
+    question: "Wann begann der Erste Weltkrieg?",
+    answer: "1914",
+  },
+
+  {
+    question: "Wann endete der Erste Weltkrieg?",
+    answer: "1918",
+  },
+
+  {
+    question: "Wann begann der Zweite Weltkrieg?",
+    answer: "1939",
+  },
+
+  {
+    question: "Wann endete der Zweite Weltkrieg?",
+    answer: "1945",
+  },
+
+  {
+    question:
+      "Welche berühmte Person aus der Geschichte wird als Entdecker Amerikas betrachtet?",
+    answer: "Christoph Kolumbus",
+  },
+
+  {
+    question: "In welchem Jahr wurde die Magna Carta unterzeichnet?",
+    answer: "1215",
+  },
+
+  {
+    question: "In welchem Jahr wurde die Französische Revolution eingeleitet?",
+    answer: "1789",
+  },
+
+  {
+    question: "Wer war der erste römische Kaiser?",
+    answer: "Augustus",
+  },
+
+  {
+    question: "Welches Ereignis markiert das Ende des weströmischen Reiches?",
+    answer: "Der Fall von Rom im Jahr 476 n.Chr.",
+  },
+
+  {
+    question: "In welchem Jahr wurde das britische Schiff Titanic versenkt?",
+    answer: "1912",
+  },
+
+  {
+    question: "Wer war der Gründer des mongolischen Reiches?",
+    answer: "Dschingis Khan",
+  },
+
+  {
+    question: "Wann fand die amerikanische Unabhängigkeitserklärung statt?",
+    answer: "4. Juli 1776",
+  },
+
+  {
+    question: "Wer ist der Autor der Kommunistischen Manifests?",
+    answer: "Karl Marx und Friedrich Engels",
+  },
+
+  {
+    question:
+      "Was war das berühmte Schlacht, in der Napoleon Bonaparte endgültig besiegt wurde?",
+    answer: "Schlacht von Waterloo",
+  },
+
+  {
+    question: "Wann wurden die Vereinten Nationen (UN) gegründet?",
+    answer: "1945",
+  },
 ];
 
 const Fragen = () => {
-     console.log(fragen.length)
+  console.log(fragen.length);
   const [click, setClick] = useState("");
   const [ranNum, setRanNum] = useState(0);
   const [nextFrage, setNextFrage] = useState(false);
 
+  const [checkQ, setCheckQ] = useState([-1]);
+
   useEffect(() => {
-    const ranNumGen = Math.floor(Math.random() * fragen.length);
-    setRanNum(ranNumGen);
+    let qIndex = -1;
+    while (checkQ.includes(qIndex)) {
+      const ranNumGen = Math.floor(Math.random() * fragen.length);
+      qIndex = ranNumGen;
+    }
+    setCheckQ([...checkQ, qIndex])
+    setRanNum(qIndex);
   }, [nextFrage]);
 
   const clickHandler = () => {
