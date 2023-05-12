@@ -5,15 +5,21 @@ import PlayerList from "./comp/PlayerList.jsx";
 import "./CSS/Styles.css";
 
 function App() {
-  return (
-    <>
-      <div className="wholeWrapper">
-        <PlayerList></PlayerList>
-
-        <Frage></Frage>
-      </div>
-    </>
-  );
-}
-
-export default App;
+     const [currentPlayer, setCurrentPlayer] = useState(0);
+    
+   
+     return (
+       <>
+         <div className="wholeWrapper">
+           <PlayerList currentPlayer={currentPlayer}></PlayerList>
+   
+           <Frage
+             currentPlayer={currentPlayer}
+             setCurrentPlayer={setCurrentPlayer}
+           ></Frage>
+         </div>
+       </>
+     );
+   }
+   
+   export default App;

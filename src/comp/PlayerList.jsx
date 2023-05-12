@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Player from "./Player.jsx";
 import "../CSS/PlayerList.css";
 
-const PlayerList = () => {
+const PlayerList = (props) => {
   const [playerNames, setPlayerNames] = useState([]);
   const [hearts, setHearts] = useState([]);
   const [newName, setNewName] = useState("");
@@ -45,7 +45,11 @@ const PlayerList = () => {
     <>
       <div className="newNameWrapper">
         <div className="nameInput">
-          <input value={newName} onChange={handleInputChange} placeholder="name..."></input>
+          <input
+            value={newName}
+            onChange={handleInputChange}
+            placeholder="name..."
+          ></input>
           <input
             type="range"
             min="1"
@@ -59,6 +63,8 @@ const PlayerList = () => {
         <div>
           {playerNames.map((name, index) => (
             <Player
+              currentPlayer={props.currentPlayer}
+              index={index}
               key={index}
               name={name}
               hearts={hearts[index]}

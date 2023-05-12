@@ -905,15 +905,15 @@ const fragen = [
   },
 ];
 
-const Fragen = () => {
-  console.log(fragen.length);
+const Fragen = (props) => {
+  
   const [click, setClick] = useState("");
   const [ranNum, setRanNum] = useState(0);
   const [nextFrage, setNextFrage] = useState(false);
 
   const [checkQ, setCheckQ] = useState([-1]);
 
-  useEffect(() => {
+  useEffect(() => { 
     let qIndex = -1;
     while (checkQ.includes(qIndex)) {
       const ranNumGen = Math.floor(Math.random() * fragen.length);
@@ -921,7 +921,20 @@ const Fragen = () => {
     }
     setCheckQ([...checkQ, qIndex])
     setRanNum(qIndex);
+    changePlayer();
+    
   }, [nextFrage]);
+
+  const changePlayer = () =>{
+     const playerCount = document.querySelectorAll('.player').length
+     console.log(playerCount)
+     if (props.currentPlayer < playerCount - 1){
+          props.setCurrentPlayer(prev => ++prev)
+     } else {
+          props.setCurrentPlayer(0)
+     }
+}
+
 
   const clickHandler = () => {
     setClick(fragen[ranNum].answer);
