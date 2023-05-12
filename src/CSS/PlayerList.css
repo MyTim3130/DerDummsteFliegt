@@ -1,0 +1,10 @@
+.newNameWrapper{
+     display: flex;
+     flex-direction: column;
+}
+
+.nameInput{
+     display: flex;
+
+     margin-bottom: 1rem;
+}
