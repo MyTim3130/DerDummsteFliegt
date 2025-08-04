@@ -1,17 +1,80 @@
-
-
+/* Main Layout */
 .wholeWrapper {
-     display: flex;
-     align-items: center;
-     justify-content: space-evenly;
-
-     width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-2xl);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl);
 }
 
-.fragenWrapper{
-     display: flex;
+.fragenWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+}
 
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+/* Game Title */
+.game-title {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.game-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+.game-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .wholeWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .wholeWrapper {
+    padding: var(--space-md);
+    gap: var(--space-lg);
+  }
+  
+  .game-title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .game-subtitle {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wholeWrapper {
+    padding: var(--space-sm);
+  }
+  
+  .game-title h1 {
+    font-size: 2rem;
+  }
 }

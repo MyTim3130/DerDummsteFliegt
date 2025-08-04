@@ -906,35 +906,37 @@ const fragen = [
 ];
 
 const Fragen = (props) => {
-  
   const [click, setClick] = useState("");
   const [ranNum, setRanNum] = useState(0);
   const [nextFrage, setNextFrage] = useState(false);
-
   const [checkQ, setCheckQ] = useState([-1]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => { 
-    let qIndex = -1;
-    while (checkQ.includes(qIndex)) {
-      const ranNumGen = Math.floor(Math.random() * fragen.length);
-      qIndex = ranNumGen;
-    }
-    setCheckQ([...checkQ, qIndex])
-    setRanNum(qIndex);
-    changePlayer();
+  useEffect(() => {
+    setIsLoading(true);
     
+    // Simulate loading time for smooth transition
+    setTimeout(() => {
+      let qIndex = -1;
+      while (checkQ.includes(qIndex)) {
+        const ranNumGen = Math.floor(Math.random() * fragen.length);
+        qIndex = ranNumGen;
+      }
+      setCheckQ([...checkQ, qIndex]);
+      setRanNum(qIndex);
+      changePlayer();
+      setIsLoading(false);
+    }, 300);
   }, [nextFrage]);
 
-  const changePlayer = () =>{
-     const playerCount = document.querySelectorAll('.player').length
-     console.log(playerCount)
-     if (props.currentPlayer < playerCount - 1){
-          props.setCurrentPlayer(prev => ++prev)
-     } else {
-          props.setCurrentPlayer(0)
-     }
-}
-
+  const changePlayer = () => {
+    const playerCount = document.querySelectorAll('.player-item').length;
+    if (props.currentPlayer < playerCount - 1) {
+      props.setCurrentPlayer(prev => ++prev);
+    } else {
+      props.setCurrentPlayer(0);
+    }
+  };
 
   const clickHandler = () => {
     setClick(fragen[ranNum].answer);
@@ -945,17 +947,61 @@ const Fragen = (props) => {
     setClick("");
   };
 
-  return (
-    <>
+  const getCurrentPlayerName = () => {
+    const players = document.querySelectorAll('.player-name');
+    if (players[props.currentPlayer]) {
+      return players[props.currentPlayer].textContent;
+    }
+    return "Spieler";
+  };
+
+  if (isLoading) {
+    return (
       <div className="qWrapper">
-        <h2>{fragen[ranNum].question}</h2>
-        <h3 className="qAnswer">{click === "" ? "Answer Hidden" : click}</h3>
-        <div>
-          <button onClick={clickHandler}>Show Answer</button>
-          <button onClick={nextQuestionHandler}> Next Question</button>
+        <div className="question-card">
+          <div className="question-loading">
+            <div className="loading-spinner"></div>
+            <p>Nächste Frage wird geladen...</p>
+          </div>
         </div>
       </div>
-    </>
+    );
+  }
+
+  return (
+    <div className="qWrapper">
+      <div className="question-card">
+        <div className="current-player-indicator">
+          {getCurrentPlayerName()} ist dran
+        </div>
+        
+        <div className="question-text">
+          {fragen[ranNum].question}
+        </div>
+        
+        <div className="answer-section">
+          <div className={`qAnswer ${click === "" ? 'answer-hidden' : 'answer-revealed'}`}>
+            {click === "" ? "Antwort verborgen" : click}
+          </div>
+        </div>
+        
+        <div className="question-actions">
+          <button 
+            className="show-answer-btn"
+            onClick={clickHandler}
+            disabled={click !== ""}
+          >
+            {click === "" ? "Antwort zeigen" : "Antwort gezeigt"}
+          </button>
+          <button 
+            className="next-question-btn"
+            onClick={nextQuestionHandler}
+          >
+            Nächste Frage
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

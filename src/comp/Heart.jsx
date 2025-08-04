@@ -1,16 +1,14 @@
 import React from "react";
 
 const Heart = ({ crossed, onClick }) => (
-  <span
+  <button
+    className={`heart ${crossed ? 'heart-crossed' : 'heart-active'}`}
     onClick={onClick}
-    style={{
-      display: crossed ? "none" : "block",
-      marginRight: "5px",
-      cursor: "pointer"
-    }}
+    title={crossed ? "Herz wiederherstellen" : "Herz entfernen"}
   >
-    ❤️
-  </span>
+    <span className="heart-icon">❤️</span>
+    {crossed && <span className="heart-cross">✕</span>}
+  </button>
 );
 
 export default Heart;
